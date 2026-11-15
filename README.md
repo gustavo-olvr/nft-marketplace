@@ -136,3 +136,4 @@ Todo evento tem `eventId`, `resource`, `resourceId`, `version` e `occurredAt`. O
 ## Deploy
 
 O projeto inclui `vercel.json` (reescrita de rotas para a SPA, para acesso direto e refresh funcionarem, e cabeçalhos do service worker). Na Vercel: importe o repositório, framework **Vite**, comando `npm run build`, saída `dist`. O build de demonstração já ativa o MSW, então a aplicação publicada funciona sem backend, inclusive o tempo real.
+# nft-marketplace
