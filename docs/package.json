@@ -1,0 +1,71 @@
+{
+  "name": "nft-marketplace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.3.1",
+    "@radix-ui/react-label": "^2.1.17",
+    "@radix-ui/react-slot": "^1.5.0",
+    "@tanstack/react-query": "^5.107.1",
+    "@tanstack/react-router": "^1.170.46",
+    "axios": "^1.21.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.73.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "socket.io-client": "^4.8.4",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@mswjs/socket.io-binding": "^0.2.0",
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "chrome-launcher": "^1.2.3",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "lighthouse": "^13.6.0",
+    "msw": "^2.15.0",
+    "prettier": "^3.10.1",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  },
+  "scripts": {
+    "dev": "vite --mode mocks",
+    "build": "tsc --noEmit && vite build --mode mocks",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:flows": "tsx scripts/smoke-flows.ts",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "smoke:account": "tsx scripts/smoke-account.ts",
+    "smoke:realtime": "tsx scripts/smoke-realtime.ts",
+    "test:mocks": "npm run smoke && npm run smoke:flows && npm run smoke:account && npm run smoke:realtime",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "test:visual": "cross-env VISUAL=1 playwright test",
+    "test:visual:update": "cross-env VISUAL=1 playwright test --update-snapshots",
+    "lighthouse": "node lighthouse/run.mjs"
+  },
+  "engines": {
+    "node": ">=22.19"
+  }
+}

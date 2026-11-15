@@ -1,0 +1,11 @@
+{
+  "remoteName": "origin",
+  "projects": [
+    {
+      "id": "prj_MgX8oyr6BGEcG9AhnNBN9s67OXzs",
+      "name": "nft-marketplace",
+      "directory": ".",
+      "orgId": "team_MChgBCbAUQFUvXPipFpltdF9"
+    }
+  ]
+}
